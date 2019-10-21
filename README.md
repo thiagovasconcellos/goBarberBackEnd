@@ -6,7 +6,7 @@ GoBarber!
 ### `yarn dev`
 
 Runs the app in the development mode with nodemon.
-This allows you to change something on the project and it instatly affects on how.
+This allows you to change something on the project and it instatly affects on how server works.
 
 ## How it works
 
