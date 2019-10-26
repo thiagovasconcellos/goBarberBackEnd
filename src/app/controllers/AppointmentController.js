@@ -1,7 +1,5 @@
 import * as Yup from 'yup';
-import {
-  startOfHour, parseISO, isBefore, format, subHours,
-} from 'date-fns';
+import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
