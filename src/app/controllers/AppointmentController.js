@@ -1,5 +1,7 @@
 import * as Yup from 'yup';
-import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns';
+import {
+  startOfHour, parseISO, isBefore, format, subHours,
+} from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
@@ -17,7 +19,7 @@ class AppointmentController {
       order: ['date'],
       limit: 20,
       offset: (page - 1) * 20,
-      attributes: ['id', 'date'],
+      attributes: ['id', 'date', 'past', 'cancelable'],
       include: [
         {
           model: User,
@@ -127,7 +129,7 @@ class AppointmentController {
 
     appointment.canceled_at = new Date();
     await appointment.save();
-    
+
     await Queue.add(CancellationMail.key, {
       appointment,
     });
