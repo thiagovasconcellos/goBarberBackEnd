@@ -1,6 +1,3 @@
-## GoStack9 Modules -> #2
-GoBarber!
-
 ## Getting started
 
 ### `yarn dev`
@@ -41,7 +38,3 @@ This project will also cover a front-end app for providers and a mobile app for 
 ## Authors
 
 * **Thiago Vasconcellos**
-
-## Acknowledgments
-
-* This is the first!
